@@ -1,0 +1,52 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+<div class="mdl-grid" align="center">
+    <div class="mdl-layout-spacer"></div>
+    <div class="mdl-layout__header--scroll mdl-color--green-800">
+        <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp mdl-color--green-300">
+            <caption><h4 class="mdl-color-text--grey-500">PUNTOS DE LOCALIZACIÓN</h4></caption>
+            <thead>
+            <tr>
+                <th class="mdl-data-table__cell--non-numeric">
+                    #ID
+                </th>
+                <th class="mdl-data-table__cell--non-numeric">
+                    Fecha de creación
+                </th>
+                <th class="mdl-data-table__cell--non-numeric">
+                    Descripcion
+                </th>
+                <th class="mdl-data-table__cell--non-numeric">
+                    Latitud
+                </th>
+                <th class="mdl-data-table__cell--non-numeric">
+                    Longitud
+                </th>
+
+            </tr>
+            </thead>
+            <tbody>
+
+            {% for key,value in waypoints %}
+
+                <tr>
+                    <td class="mdl-data-table__cell--non-numeric">{{ value.getId }}</td>
+                    <td class="mdl-data-table__cell--non-numeric">{{ value.getTitle }}</td>
+                    <td class="mdl-data-table__cell--non-numeric">{{ value.getDescription }}</td>
+                    <td class="mdl-data-table__cell--non-numeric">{{ value.getLatitude }}</td>
+                    <td class="mdl-data-table__cell--non-numeric">{{ value.getLongitude }}</td>
+                </tr>
+
+            {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+    <div class="mdl-layout-spacer">
+        <a href="{{ path('dashboard') }}" type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-color-text--grey-500 mdl-color--orange-A400">
+            Volver
+        </a>
+    </div>
+    </div>
+{% endblock %}

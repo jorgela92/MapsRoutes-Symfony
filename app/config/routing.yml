@@ -1,0 +1,25 @@
+api:
+    resource: "@ApiBundle/Controller/"
+    type:     annotation
+    prefix:   /
+    defaults: {_format: json} 
+core:
+    resource: "@CoreBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+login:
+    pattern: /
+    defaults: { _controller: CoreBundle:Default:login }
+
+login_check:
+    pattern: /login_check
+
+logout:
+    pattern: /logout
+
+

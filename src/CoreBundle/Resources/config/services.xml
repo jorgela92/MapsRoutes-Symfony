@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+
+        <service class="CoreBundle\Model\UserModel" id="corebundle.model.usermodel">
+            <argument id="doctrine.orm.entity_manager" type="service"/>
+        </service>
+
+        <service class="CoreBundle\Model\RoleModel" id="corebundle.model.rolemodel">
+            <argument id="doctrine.orm.entity_manager" type="service"/>
+        </service>
+
+        <service class="CoreBundle\Model\RouteModel" id="corebundle.model.routemodel">
+            <argument id="doctrine.orm.entity_manager" type="service"/>
+        </service>
+
+        <service class="CoreBundle\Model\WaypointModel" id="corebundle.model.waypointmodel">
+            <argument id="doctrine.orm.entity_manager" type="service"/>
+        </service>
+
+    </services>
+
+</container>

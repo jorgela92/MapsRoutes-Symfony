@@ -1,0 +1,24 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <div class="mdl-grid" align="center">
+        <div class="mdl-layout-spacer"></div>
+        <div class="mdl-layout__header--scroll mdl-color--green-800" >
+            <form class="form-signin" method="post" action="{{ path('login_check') }}"  method="post">
+                <div class="mdl-cell">
+                    <h3 class="mdl-color-text--grey-500" align="center">ACCESO</h3>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-color-text--grey-300">
+                        <input type="text" class="mdl-textfield__input .mdl-color-text--grey-100" placeholder="Nombre de usuario"  id="username" name="_username" value="{{ last_username }}" autofocus/>
+                        <label class="mdl-textfield__label mdl-color-text--grey-300" for="_username">Nombre de usuario</label>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-color-text--grey-300">
+                        <input type="password" class="mdl-textfield__input .mdl-color-text--grey-100" placeholder="Contraseña"  autocomplete="off" id="password" type="password" name="_password"/>
+                        <label class="mdl-textfield__label mdl-color-text--grey-300" for="_password">Contraseña</label>
+                    </div>
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-color-text--grey-500 mdl-color--orange-A400" type="submit">ENTRAR</button>
+                </div>
+            </form>
+        </div>
+        <div class="mdl-layout-spacer"></div>
+    </div>
+{% endblock %}

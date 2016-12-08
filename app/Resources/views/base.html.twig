@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}MapsRoute{% endblock %}</title>
+        {% block stylesheets %}
+            <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+            <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.brown-deep_purple.min.css" />
+            <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+            <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <div class="mdl-layout__title mdl-color--green-900" align="center">
+            <img src="{{ asset('bundles/framework/images/logo.png') }}" width="5%" height="5%" vspace="10"/>
+            <h2 class="mdl-color-text--red-50">MAPS ROUTES</h2>
+        </div>
+    </head>
+    <body class="mdl-color--green">
+
+        {% block body %}{% endblock %}
+        {% block javascripts %}
+        {% endblock %}
+    </body>
+</html>
